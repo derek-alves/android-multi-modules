@@ -19,6 +19,7 @@ dependencyResolutionManagement {
     }
 }
 
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 rootProject.name = "modules-study"
 include(":app")
 include(":auth:domain")
