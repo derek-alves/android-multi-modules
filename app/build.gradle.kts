@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.jetbrains.kotlin.compose)
     alias(libs.plugins.mapsplatform.secrets.plugin)
-    alias(libs.plugins.modulesStudy.android.application)
+    alias(libs.plugins.modulesStudy.android.application.compose)
 }
 
 android {
@@ -14,15 +14,7 @@ android {
         }
     }
 
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
+
     buildFeatures {
         compose = true
     }

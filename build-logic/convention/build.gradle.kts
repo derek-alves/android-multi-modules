@@ -1,5 +1,5 @@
 plugins {
-   `kotlin-dsl`
+    `kotlin-dsl`
 }
 group = "com.composablecode.modulesStudy.buildlogic"
 
@@ -11,11 +11,16 @@ dependencies {
     compileOnly(libs.room.gradlePlugin)
 }
 
-gradlePlugin{
-    plugins{
-        register("androidApplication"){
+gradlePlugin {
+    plugins {
+        register("androidApplication") {
             id = "modulesStudy.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
+        register("androidApplicationCompose") {
+            id = "modulesStudy.android.application.compose"
+            implementationClass = "AndroidApplicationComposeConventionPlugin"
+        }
+
     }
 }
